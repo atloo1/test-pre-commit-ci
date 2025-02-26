@@ -1,0 +1,39 @@
+[project]
+name = "test-pre-commit-ci"
+version = "0.1.0"
+description = "test pre-commit.ci autoupdate"
+authors = [
+    {name = "atloo1"}
+]
+license = "MIT"
+readme = "README.md"
+requires-python = ">=3.9,<4"
+dependencies = [
+]
+
+[tool.poetry.group.dev.dependencies]
+mypy = ">=1,<2"
+pre-commit = ">=4,<5"
+pytest = ">=8,<9"
+ruff = ">=0.9,<1"
+
+[build-system]
+requires = ["poetry-core>=2,<3"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.format]
+quote-style = "single"
+indent-style = "tab"
+
+[tool.ruff.lint]
+select = [
+    "B",    # flake8-bugbear
+    "E",    # pycodestyle
+    "F",    # Pyflakes
+    "I",    # isort
+    "SIM",  # flake8-simplify
+    "UP",   # pyupgrade
+]
